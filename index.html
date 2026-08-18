@@ -3,31 +3,632 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chor TopUp</title>
+
+    <meta name="description" content="Chor TopUp - Fast and secure game top up service">
+    <meta name="theme-color" content="#111827">
+
+    <title>Chor TopUp | Fast Game Top Up</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="topup-card">
-        <h2>Chor TopUp Store</h2>
-        <form>
-            <label for="player-id">Player ID:</label>
-            <input type="text" id="player-id" placeholder="Enter your Game ID" required>
 
-            <label for="diamonds">Select Diamonds:</label>
-            <select id="diamonds">
-                <option value="100">100 Diamonds - 80 BDT</option>
-                <option value="520">520 Diamonds - 380 BDT</option>
-                <option value="1060">1060 Diamonds - 750 BDT</option>
-            </select>
+    <!-- Header -->
+    <header class="header">
+        <div class="container nav">
 
-            <label for="payment">Payment Method:</label>
-            <select id="payment">
-                <option value="bkash">bKash</option>
-                <option value="nagad">Nagad</option>
-            </select>
+            <a href="#" class="logo">
+                <span class="logo-icon">⚡</span>
+                <span>Chor <b>TopUp</b></span>
+            </a>
 
-            <button type="submit">Order Now</button>
-        </form>
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#topup">Top Up</a>
+                <a href="#how">How It Works</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <button class="menu-btn" id="menuBtn">☰</button>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#home">Home</a>
+            <a href="#topup">Top Up</a>
+            <a href="#how">How It Works</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </header>
+
+
+    <!-- Hero -->
+    <main>
+
+        <section class="hero" id="home">
+            <div class="container hero-grid">
+
+                <div class="hero-content">
+
+                    <div class="badge">
+                        <span class="status-dot"></span>
+                        Instant Top Up Service
+                    </div>
+
+                    <h1>
+                        Fast & Easy
+                        <span>Game Top Up</span>
+                    </h1>
+
+                    <p>
+                        Recharge your favorite games quickly and securely.
+                        Choose your package, enter your Player ID and place your order.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#topup" class="btn btn-primary">
+                            Top Up Now →
+                        </a>
+
+                        <a href="#how" class="btn btn-secondary">
+                            How It Works
+                        </a>
+                    </div>
+
+                    <div class="trust-row">
+                        <div>
+                            <strong>24/7</strong>
+                            <span>Support</span>
+                        </div>
+
+                        <div>
+                            <strong>Fast</strong>
+                            <span>Delivery</span>
+                        </div>
+
+                        <div>
+                            <strong>100%</strong>
+                            <span>Secure</span>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="hero-card">
+                    <div class="card-glow"></div>
+
+                    <div class="floating-card floating-one">
+                        <span>💎</span>
+                        <div>
+                            <strong>100 Diamonds</strong>
+                            <small>Popular Package</small>
+                        </div>
+                    </div>
+
+                    <div class="phone-preview">
+
+                        <div class="phone-top"></div>
+
+                        <div class="preview-header">
+                            <span>CHOR TOPUP</span>
+                            <span>●</span>
+                        </div>
+
+                        <div class="preview-balance">
+                            <small>Available Packages</small>
+                            <strong>Game Diamonds</strong>
+                        </div>
+
+                        <div class="preview-package">
+                            <div class="diamond">💎</div>
+                            <div>
+                                <strong>100 Diamonds</strong>
+                                <span>Instant Delivery</span>
+                            </div>
+                            <b>৳95</b>
+                        </div>
+
+                        <div class="preview-package">
+                            <div class="diamond">💎</div>
+                            <div>
+                                <strong>310 Diamonds</strong>
+                                <span>Instant Delivery</span>
+                            </div>
+                            <b>৳280</b>
+                        </div>
+
+                        <div class="preview-package">
+                            <div class="diamond">💎</div>
+                            <div>
+                                <strong>520 Diamonds</strong>
+                                <span>Instant Delivery</span>
+                            </div>
+                            <b>৳450</b>
+                        </div>
+
+                        <div class="preview-button">
+                            Continue →
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Top Up -->
+        <section class="topup-section" id="topup">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <div class="mini-label">TOP UP</div>
+                    <h2>Choose Your Package</h2>
+                    <p>Select your game and package to continue.</p>
+                </div>
+
+
+                <div class="topup-layout">
+
+                    <!-- Form -->
+                    <div class="topup-card">
+
+                        <form id="topupForm">
+
+                            <div class="form-group">
+                                <label for="game">Select Game</label>
+
+                                <div class="select-wrap">
+                                    <select id="game" required>
+                                        <option value="">Choose a game</option>
+                                        <option value="Free Fire">Free Fire</option>
+                                        <option value="Free Fire MAX">Free Fire MAX</option>
+                                        <option value="PUBG Mobile">PUBG Mobile</option>
+                                        <option value="Mobile Legends">Mobile Legends</option>
+                                    </select>
+                                    <span>⌄</span>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="playerId">Player ID</label>
+
+                                <input
+                                    type="text"
+                                    id="playerId"
+                                    placeholder="Enter your Game ID"
+                                    autocomplete="off"
+                                    required
+                                >
+
+                                <small class="input-help">
+                                    Double-check your Player ID before ordering.
+                                </small>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label>Choose Diamonds</label>
+
+                                <div class="package-grid" id="packageGrid">
+
+                                    <button type="button" class="package" data-diamonds="100" data-price="95">
+                                        <span class="diamond-icon">💎</span>
+                                        <strong>100</strong>
+                                        <small>৳95</small>
+                                    </button>
+
+                                    <button type="button" class="package" data-diamonds="210" data-price="185">
+                                        <span class="diamond-icon">💎</span>
+                                        <strong>210</strong>
+                                        <small>৳185</small>
+                                    </button>
+
+                                    <button type="button" class="package" data-diamonds="310" data-price="280">
+                                        <span class="diamond-icon">💎</span>
+                                        <strong>310</strong>
+                                        <small>৳280</small>
+                                    </button>
+
+                                    <button type="button" class="package" data-diamonds="520" data-price="450">
+                                        <span class="diamond-icon">💎</span>
+                                        <strong>520</strong>
+                                        <small>৳450</small>
+                                    </button>
+
+                                    <button type="button" class="package" data-diamonds="1060" data-price="850">
+                                        <span class="diamond-icon">💎</span>
+                                        <strong>1060</strong>
+                                        <small>৳850</small>
+                                    </button>
+
+                                    <button type="button" class="package" data-diamonds="2180" data-price="1650">
+                                        <span class="diamond-icon">💎</span>
+                                        <strong>2180</strong>
+                                        <small>৳1650</small>
+                                    </button>
+
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="payment">Payment Method</label>
+
+                                <div class="payment-grid">
+
+                                    <label class="payment-option">
+                                        <input type="radio" name="payment" value="bKash" required>
+                                        <div>
+                                            <span class="payment-logo bkash">bK</span>
+                                            <strong>bKash</strong>
+                                        </div>
+                                    </label>
+
+                                    <label class="payment-option">
+                                        <input type="radio" name="payment" value="Nagad">
+                                        <div>
+                                            <span class="payment-logo nagad">N</span>
+                                            <strong>Nagad</strong>
+                                        </div>
+                                    </label>
+
+                                    <label class="payment-option">
+                                        <input type="radio" name="payment" value="Rocket">
+                                        <div>
+                                            <span class="payment-logo rocket">R</span>
+                                            <strong>Rocket</strong>
+                                        </div>
+                                    </label>
+
+                                </div>
+                            </div>
+
+
+                            <div class="summary-box">
+
+                                <div>
+                                    <span>Game</span>
+                                    <strong id="summaryGame">—</strong>
+                                </div>
+
+                                <div>
+                                    <span>Player ID</span>
+                                    <strong id="summaryId">—</strong>
+                                </div>
+
+                                <div>
+                                    <span>Package</span>
+                                    <strong id="summaryPackage">—</strong>
+                                </div>
+
+                                <div class="total-row">
+                                    <span>Total</span>
+                                    <strong id="summaryPrice">৳0</strong>
+                                </div>
+
+                            </div>
+
+
+                            <button type="submit" class="submit-btn">
+                                <span>Place Order</span>
+                                <span>→</span>
+                            </button>
+
+                            <p class="secure-text">
+                                🔒 Your information is used only for processing your order.
+                            </p>
+
+                        </form>
+
+                    </div>
+
+
+                    <!-- Side information -->
+                    <aside class="info-card">
+
+                        <div class="info-icon">⚡</div>
+
+                        <h3>Fast Delivery</h3>
+
+                        <p>
+                            Orders are processed quickly after payment confirmation.
+                        </p>
+
+                        <div class="info-line"></div>
+
+                        <div class="info-item">
+                            <span>✓</span>
+                            <div>
+                                <strong>Secure Payment</strong>
+                                <small>bKash, Nagad & Rocket</small>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <span>✓</span>
+                            <div>
+                                <strong>Quick Service</strong>
+                                <small>Fast order processing</small>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <span>✓</span>
+                            <div>
+                                <strong>Customer Support</strong>
+                                <small>Available when you need us</small>
+                            </div>
+                        </div>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- How it Works -->
+        <section class="how-section" id="how">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <div class="mini-label">PROCESS</div>
+                    <h2>How It Works</h2>
+                    <p>Top up your game in three easy steps.</p>
+                </div>
+
+
+                <div class="steps">
+
+                    <div class="step-card">
+                        <div class="step-number">01</div>
+                        <div class="step-icon">🎮</div>
+                        <h3>Enter Player ID</h3>
+                        <p>Enter your correct game Player ID.</p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">02</div>
+                        <div class="step-icon">💳</div>
+                        <h3>Make Payment</h3>
+                        <p>Select a payment method and complete your payment.</p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-number">03</div>
+                        <div class="step-icon">⚡</div>
+                        <h3>Receive Top Up</h3>
+                        <p>Your selected package will be processed.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FAQ -->
+        <section class="faq-section">
+
+            <div class="container faq-container">
+
+                <div class="section-heading">
+                    <div class="mini-label">FAQ</div>
+                    <h2>Frequently Asked Questions</h2>
+                </div>
+
+
+                <div class="faq-list">
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            How long does an order take?
+                            <span>+</span>
+                        </button>
+
+                        <div class="faq-answer">
+                            <p>
+                                Processing time depends on the selected game and payment confirmation.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Do I need to provide my password?
+                            <span>+</span>
+                        </button>
+
+                        <div class="faq-answer">
+                            <p>
+                                No. Never share your game account password with anyone.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What happens after I place the order?
+                            <span>+</span>
+                        </button>
+
+                        <div class="faq-answer">
+                            <p>
+                                Your order details will be prepared and you can send them to support through WhatsApp.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Can I cancel my order?
+                            <span>+</span>
+                        </button>
+
+                        <div class="faq-answer">
+                            <p>
+                                Contact support as soon as possible if you need help with an order.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer id="contact">
+
+        <div class="container footer-grid">
+
+            <div>
+                <a href="#" class="logo footer-logo">
+                    <span class="logo-icon">⚡</span>
+                    Chor <b>TopUp</b>
+                </a>
+
+                <p class="footer-description">
+                    Fast and simple game top up service.
+                </p>
+            </div>
+
+
+            <div>
+                <h4>Quick Links</h4>
+
+                <a href="#home">Home</a>
+                <a href="#topup">Top Up</a>
+                <a href="#how">How It Works</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+
+            <div>
+                <h4>Support</h4>
+
+                <a href="https://wa.me/8801XXXXXXXXX" target="_blank">
+                    WhatsApp
+                </a>
+
+                <a href="mailto:your@email.com">
+                    Email
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="container footer-bottom">
+            <span>
+                © <span id="year"></span> Chor TopUp. All rights reserved.
+            </span>
+
+            <span>
+                Made with ❤️
+            </span>
+        </div>
+
+    </footer>
+
+
+    <!-- Order Modal -->
+    <div class="modal-overlay" id="orderModal">
+
+        <div class="modal">
+
+            <button class="modal-close" id="closeModal">×</button>
+
+            <div class="modal-success">
+                ✓
+            </div>
+
+            <h2>Order Ready!</h2>
+
+            <p class="modal-subtitle">
+                Check your order details below.
+            </p>
+
+
+            <div class="order-details">
+
+                <div>
+                    <span>Order ID</span>
+                    <strong id="orderId">—</strong>
+                </div>
+
+                <div>
+                    <span>Game</span>
+                    <strong id="orderGame">—</strong>
+                </div>
+
+                <div>
+                    <span>Player ID</span>
+                    <strong id="orderPlayerId">—</strong>
+                </div>
+
+                <div>
+                    <span>Package</span>
+                    <strong id="orderPackage">—</strong>
+                </div>
+
+                <div>
+                    <span>Payment</span>
+                    <strong id="orderPayment">—</strong>
+                </div>
+
+                <div class="modal-total">
+                    <span>Total</span>
+                    <strong id="orderTotal">৳0</strong>
+                </div>
+
+            </div>
+
+
+            <a
+                href="#"
+                target="_blank"
+                id="whatsappBtn"
+                class="whatsapp-btn"
+            >
+                Send Order on WhatsApp
+            </a>
+
+            <button class="copy-btn" id="copyOrder">
+                Copy Order Details
+            </button>
+
+        </div>
+
     </div>
+
+
+    <div class="toast" id="toast">
+        <span>✓</span>
+        <p>Copied successfully!</p>
+    </div>
+
+
+    <script src="script.js"></script>
+
 </body>
 </html>
